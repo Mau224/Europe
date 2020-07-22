@@ -1,0 +1,108 @@
+//@font-face {
+//  font-family: "Montserrat";
+//  src: url("../fonts/PTMono-Regular.woff2") format("woff2"),
+//    url("../fonts/PTMono-Regular.woff") format("woff");
+//  font-display: swap;
+//  font-weight: 400;
+//  font-style: normal;
+//}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"),
+    url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+    url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppinst";
+  src: url("../fonts/Poppins-Regular.woff2") format("woff2"),
+    url("../fonts/Poppins-Regular.woff") format("woff");
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  background: #ffffff;
+  color: #000000;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+a {
+  font-family: $fontfamily;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
+  text-decoration: none;
+  list-style: none;
+  color: $black;
+  outline: none;
+}
+
+
+button:hover {
+  background-color: $orange;
+}
+
+body.hidden {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+}
+
+input:focus:invalid {
+  border: 1px solid red;
+}
+
+input:focus:invalid + label {
+  color: red;
+}
+
+
+input:focus:valid {
+  border: 1px solid green;
+}
+
+input:focus:valid + label {
+  font-size: 0;
+}
+
+input:focus + label {
+  display: inline-block;
+}
+
+label {
+  display: none;
+}
+
+.bg-main {
+  background: url("../img/main-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 130px;
+}
+
+@media (max-width: $tablet-width) {
+  .bg-main {
+    background: none;
+  }
+}

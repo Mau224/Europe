@@ -1,0 +1,161 @@
+.popup-fade {
+  display: none;
+}
+
+.popup-fade::before {
+  content: "";
+  background: #e5e5e5;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  height: 100%;
+  z-index: 9999;
+}
+
+.popup {
+  position: fixed;
+  top: 15%;
+  left: 38%;
+  width: 728px;
+  height: 444px;
+  margin-left: -186px;
+  background: #ececec;
+  outline: none;
+  border-radius: 4px;
+  z-index: 99999;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.popup-close {
+  position: absolute;
+  top: 23px;
+  right: 28px;
+  padding: 10px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 23px;
+    height: 2px;
+    transform: rotate(45deg);
+    background: rgba(20, 21, 23, 0.2);
+    top: 18px;
+    right: 2px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    right: 2px;
+    width: 23px;
+    height: 2px;
+    transform: rotate(-45deg);
+    background: rgba(20, 21, 23, 0.2);
+  }
+}
+
+.popup__photo-block {
+  width: 338px;
+  height: 444px;
+  background: url("../img/bg-modal.jpg");
+  background-repeat: no-repeat;
+}
+
+
+.popup__container {
+  width: 100%;
+  display: flex;
+}
+
+
+.popup__form-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.popup__form-block h3 {
+  margin-bottom: 50px;
+}
+
+.popup__input-block {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+.popup__input {
+  width: 270px;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(20, 21, 23, 0.2);
+}
+
+.popup__btn-sub {
+  width: 176px;
+  height: 50px;
+  background: #fe7865;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 25px;
+}
+
+body.popup {
+  overflow: hidden;
+}
+
+.popup__label {
+  position: absolute;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  top: 51px;
+  left: 0;
+  color: red;
+}
+
+@media (max-width: $mobile-width) {
+  .popup {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+
+  .popup__photo-block {
+    display: none;
+  }
+
+  .popup__form-block h3 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 170%;
+  }
+
+  .popup__btn-sub {
+    width: 288px;
+  }
+
+  .popup__input {
+    width: 258px;
+  }
+}
