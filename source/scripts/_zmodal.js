@@ -72,7 +72,7 @@ $(document).ready(function($) {
 });
 
 $(document).ready(function($) {
-  $('#tel').on('input', function() {
+  $('#tel,#phone').on('input', function() {
     $(this).val($(this).val().replace(/[A-Za-zА-Яа-яЁё]/, ''));
   });
 });

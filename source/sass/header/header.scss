@@ -114,10 +114,6 @@
 }
 
 @media (max-width: $tablet-width) {
-  body.lock {
-    overflow-x: hidden;
-  }
-
   .header__main-container {
     display: flex;
     justify-content: flex-end;
@@ -299,24 +295,7 @@
   background: none;
 }
 
-//.content {
-//  padding: 100px 0 0 0;
-//}
-//
-//.content__text {
-//  font-size: 18px;
-//  line-height: 25px;
-//}
-//
-//.content__text p {
-//  margin: 0 0 20px 0;
-//}
-
 @media (max-width: $mobile-width) {
-  .content {
-    padding: 70px 0 0 0;
-  }
-
   .header__burger {
     width: 50px;
   }

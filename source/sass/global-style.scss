@@ -42,7 +42,7 @@ body {
   font-family: "Montserrat", "Arial", sans-serif;
   background: #ffffff;
   color: #000000;
-  overflow-x: hidden;
+  //overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -69,12 +69,17 @@ body.hidden {
   overflow: hidden;
 }
 
-input:focus:invalid {
+body.lock {
+  overflow: hidden;
+}
+
+input:not(:placeholder-shown):invalid {
   border: 1px solid red;
 }
 
-input:focus:invalid + label {
+input:not(:placeholder-shown):invalid + label {
   color: red;
+  display: inline-block;
 }
 
 
@@ -84,10 +89,6 @@ input:focus:valid {
 
 input:focus:valid + label {
   font-size: 0;
-}
-
-input:focus + label {
-  display: inline-block;
 }
 
 label {

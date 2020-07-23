@@ -170,6 +170,7 @@
 
   .form__input-block {
     width: 100%;
+    max-width: 320px;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
@@ -196,10 +197,11 @@
 
   .form__label {
     top: 52px;
-    left: 27%;
+    left: 6%;
 
     &--tel {
       top: -15px;
+      left: 6%;
     }
   }
 }

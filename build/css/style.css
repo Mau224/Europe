@@ -64,7 +64,6 @@ body {
   font-family: "Montserrat", "Arial", sans-serif;
   background: #ffffff;
   color: #000000;
-  overflow-x: hidden;
   scroll-behavior: smooth; }
 
 a {
@@ -86,20 +85,21 @@ body.hidden {
   position: fixed;
   overflow: hidden; }
 
-input:focus:invalid {
+body.lock {
+  overflow: hidden; }
+
+input:not(:placeholder-shown):invalid {
   border: 1px solid red; }
 
-input:focus:invalid + label {
-  color: red; }
+input:not(:placeholder-shown):invalid + label {
+  color: red;
+  display: inline-block; }
 
 input:focus:valid {
   border: 1px solid green; }
 
 input:focus:valid + label {
   font-size: 0; }
-
-input:focus + label {
-  display: inline-block; }
 
 label {
   display: none; }
@@ -223,8 +223,6 @@ label {
   margin: 0 0 0 43px; }
 
 @media (max-width: 1023px) {
-  body.lock {
-    overflow-x: hidden; }
   .header__main-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -383,8 +381,6 @@ label {
   background: none; }
 
 @media (max-width: 767px) {
-  .content {
-    padding: 70px 0 0 0; }
   .header__burger {
     width: 50px; }
   .header__burger.active::before {
@@ -739,7 +735,7 @@ label {
     width: 288px;
     height: 422px; }
   .places__block-content {
-    top: -531px; }
+    top: -515px; }
   .places__link {
     top: 40%; }
   .places__block-popup {
@@ -1742,6 +1738,7 @@ label {
     max-width: 288px; }
   .form__input-block {
     width: 100%;
+    max-width: 320px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1767,9 +1764,10 @@ label {
     margin: 0 auto 29px; }
   .form__label {
     top: 52px;
-    left: 27%; }
+    left: 6%; }
     .form__label--tel {
-      top: -15px; } }
+      top: -15px;
+      left: 6%; } }
 
 .footer__container {
   display: -webkit-box;
@@ -2193,6 +2191,12 @@ body.popup {
   top: 51px;
   left: 0;
   color: red; }
+  .popup__label--tel {
+    top: -15px; }
+
+@media (max-width: 1023px) {
+  .popup {
+    left: 27%; } }
 
 @media (max-width: 767px) {
   .popup {
@@ -2200,7 +2204,8 @@ body.popup {
     height: 100%;
     top: 0;
     left: 0;
-    margin: 0; }
+    margin: 0;
+    background: #ffffff; }
   .popup__photo-block {
     display: none; }
   .popup__form-block h3 {
@@ -2211,7 +2216,9 @@ body.popup {
   .popup__btn-sub {
     width: 288px; }
   .popup__input {
-    width: 258px; } }
+    width: 258px; }
+  .popup__label--tel {
+    top: -15px; } }
 
 .modal {
   display: none; }
@@ -2293,6 +2300,10 @@ body.popup {
 
 body.modal {
   overflow: hidden; }
+
+@media (max-width: 1023px) {
+  .modal__container {
+    left: 27%; } }
 
 @media (max-width: 767px) {
   .modal__container {

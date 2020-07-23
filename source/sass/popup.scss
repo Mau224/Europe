@@ -129,6 +129,16 @@ body.popup {
   top: 51px;
   left: 0;
   color: red;
+
+  &--tel {
+    top: -15px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .popup {
+    left: 27%;
+  }
 }
 
 @media (max-width: $mobile-width) {
@@ -138,6 +148,7 @@ body.popup {
     top: 0;
     left: 0;
     margin: 0;
+    background: #ffffff;
   }
 
   .popup__photo-block {
@@ -157,5 +168,11 @@ body.popup {
 
   .popup__input {
     width: 258px;
+  }
+
+  .popup__label {
+    &--tel {
+      top: -15px;
+    }
   }
 }

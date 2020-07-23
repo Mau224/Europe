@@ -5,11 +5,23 @@ $(document).ready(function() {
   });
 });
 
-// $(function () {
-//   $('#phone').mask('+7 (999)9–999–9999'), {placeholder: "+7(___)___-__-__"};
-//   $('#tel').mask('+7 (999)9–999–9999') , {placeholder: "+7(___)___-__-__"};
-// });
+$(function () {
+  $('#phone').mask('+7 (999)–999–99'), {placeholder: "+7(___)___-__-__"};
+  $('#tel').mask('+7 (999)–999–99') , {placeholder: "+7(___)___-__-__"};
+});
 
+function moveCaretToStart(inputObject)
+{
+  if (inputObject.createTextRange)
+  {
+    var r = inputObject.createTextRange();
+    r.collapse(true);
+    r.select();
+  }
+}
+$('#tel').focus(function() {
+  moveCaretToStart(document.getElementById("mytextbox"));
+});
 
 $(function() {
   var tab = $('#tabs .tabs-items > div');

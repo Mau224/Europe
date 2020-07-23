@@ -79,6 +79,12 @@ body.modal {
   overflow: hidden;
 }
 
+@media (max-width: $tablet-width) {
+  .modal__container {
+    left: 27%;
+  }
+}
+
 @media (max-width: $mobile-width) {
   .modal__container {
     width: 100%;
